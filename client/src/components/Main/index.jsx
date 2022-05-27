@@ -85,7 +85,7 @@ const Main = () => {
   </ol>
   <div className="carousel-inner">
     <div className="carousel-item">
-      <img className="first-slide" src="images/BG-17.png" alt="First slide"/>
+      <img className="first-slide" src="/Images/BG-17.png" alt="First slide"/>
         <div className="container">
           <div className={`text-left ${styles["carousel-caption"]}`}>
             <h1>MATCH MAKING</h1>
@@ -94,7 +94,7 @@ const Main = () => {
         </div>
     </div>
     <div className="carousel-item">
-      <img className="second-slide" src="images/BG-17.png" alt="Second slide"/>
+      <img className="second-slide" src="/Images/BG-17.png" alt="Second slide"/>
         <div className="container">
           <div className={styles.carouselcaption}>
             <h1>Another example headline.</h1>
@@ -105,7 +105,7 @@ const Main = () => {
         </div>
     </div>
     <div className="carousel-item active">
-      <img className="third-slide" src="images/BG-17.png" alt="Third slide"/>
+      <img className="third-slide" src="/Images/BG-17.png" alt="Third slide"/>
         <div className="container">
           <div className={`text-right ${styles["carousel-caption"]}`}>
             <h1>MATCH MAKING</h1>
@@ -130,14 +130,14 @@ const Main = () => {
 
   <div className="row">
     <div className="col-lg-4">
-      <img className="rounded-circle" src="images/medal.png" alt="Generic placeholder " width="140"
+      <img className="rounded-circle" src="/Images/medal.png" alt="Generic placeholder " width="140"
         height="140"/>
         <h2>WINNERS OF THE COMPETITION</h2>
         <p>This 2022, 3 winners joined us in competing against the top....</p>
         <p><a className="btn btn-secondary" href="/" role="button">View details »</a></p>
     </div>
     <div className="col-lg-4">
-      <img className="rounded-circle" src="images/data-server.png" alt="Generic placeholder " width="140"
+      <img className="rounded-circle" src="/Images/data-server.png" alt="Generic placeholder " width="140"
         height="140"/>
         <h2>SERVER UPDATES <br/> MAY 20,2022</h2>
         <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
@@ -147,7 +147,7 @@ const Main = () => {
         <p><a className="btn btn-secondary" href="/" role="button">View details »</a></p>
     </div>
     <div className="col-lg-4">
-      <img className="rounded-circle" src="images/competitive.png" alt="Generic " width="140"
+      <img className="rounded-circle" src="/Images/competitive.png" alt="Generic " width="140"
         height="140"/>
         <h2>NEW TOURNAMENT <br/> JUNE 2022</h2>
         <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
@@ -173,7 +173,7 @@ const Main = () => {
       </div>
       <div className="col-md-5">
         <img className="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
-          style={{width: "500 px" , height: "500 px"}} src="images/picture.jpg_large" data-holder-rendered="true"/>
+          style={{width: "500 px" , height: "500 px"}} src="/Images/picture.jpg_large" data-holder-rendered="true"/>
       </div>
     </div>
 
@@ -189,7 +189,7 @@ const Main = () => {
         </div>
         <div className="col-md-5 order-md-1">
           <img className="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
-            src="images/picture1.jpeg" data-holder-rendered="true" style={{width: "500px", height: "500px"}} />
+            src="/Images/picture1.jpeg" data-holder-rendered="true" style={{width: "500px", height: "500px"}} />
         </div>
       </div>
 
@@ -205,7 +205,7 @@ const Main = () => {
           </div>
           <div className="col-md-5">
             <img className="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
-              src="images/picture2.jpeg" data-holder-rendered="true" style={{width: "500px", height: "500px"}} />
+              src="/Images/picture2.jpeg" data-holder-rendered="true" style={{width: "500px", height: "500px"}} />
           </div>
         </div>
 
@@ -229,7 +229,7 @@ const Main = () => {
           <a href ="/" className="nav col-md-0 justify-content-center footerLogos"
             style={{ alignItems: "center", justifyontent: "center "}}>
 
-            <img src="images/logo_white.png" style={{width: "80px", height: "80px"}}  alt="gen" /></a>
+            <img src={'/Images/logo_white.png'} style={{width: "80px", height: "80px"}}  alt="gen" /></a>
 
 
           <ul className="nav col-md-2 justify-content-end">
