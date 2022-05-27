@@ -10,7 +10,7 @@ const Main = () => {
 
   return (
 
-    <div> 
+    <div>
         <header>
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
@@ -74,7 +74,8 @@ const Main = () => {
 
       </header>
 
-      <body>
+    <body>
+		<div className={styles.bodymain}>
 
 
 <div id="myCarousel" className={`slide ${styles["carousel"]}`} data-ride="carousel">
@@ -84,16 +85,16 @@ const Main = () => {
     <li data-target="#myCarousel" data-slide-to="2" className="active"></li>
   </ol>
   <div className="carousel-inner">
-    <div className="carousel-item">
+    <div className={styles.carouselitem}>
       <img className="first-slide" src="/Images/BG-17.png" alt="First slide"/>
         <div className="container">
-          <div className={`text-left ${styles["carousel-caption"]}`}>
+          <div className={`text-left ${styles["carouselcaption"]}`}>
             <h1>MATCH MAKING</h1>
             <p><a className="btn btn-lg btn-danger" href="/" role="button">PLAY NOW</a></p>
           </div>
         </div>
     </div>
-    <div className="carousel-item">
+    <div className={styles.carouselitem}>
       <img className="second-slide" src="/Images/BG-17.png" alt="Second slide"/>
         <div className="container">
           <div className={styles.carouselcaption}>
@@ -104,10 +105,10 @@ const Main = () => {
           </div>
         </div>
     </div>
-    <div className="carousel-item active">
+    <div className={`active ${styles["carouselitem"]}`}>
       <img className="third-slide" src="/Images/BG-17.png" alt="Third slide"/>
         <div className="container">
-          <div className={`text-right ${styles["carousel-caption"]}`}>
+          <div className={`text-right ${styles["carouselcaption"]}`}>
             <h1>MATCH MAKING</h1>
             <br/>
               <p><a className="btn btn-lg btn-danger" href="/" role="button">PLAY NOW</a></p>
@@ -157,17 +158,17 @@ const Main = () => {
     </div>
   </div>
 
-  </div> 
+  </div>
 
 
 
-  <hr className="featurette-divider"/>
+  <hr className={styles.featurettedivider}/>
 
     <div className="row featurette">
       <div className="col-md-7">
-        <h2 className="featurette-heading">First featurette heading. <span className="text-muted">It'll blow
+        <h2 className={styles.featuretteheading}>First featurette heading. <span className="text-muted">It'll blow
           your mind.</span></h2>
-        <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
+        <p className={`lead ${styles["newlead"]}`}>Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
           euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
           tellus ac cursus commodo.</p>
       </div>
@@ -177,11 +178,11 @@ const Main = () => {
       </div>
     </div>
 
-    <hr className="featurette-divider"/>
+    <hr className={styles.featurettedivider}/>
 
       <div className="row featurette">
         <div className="col-md-7 order-md-2">
-          <h2 className="featurette-heading">Oh yeah, it's that good. <span className="text-muted">See for
+          <h2 className={styles.featuretteheading}>Oh yeah, it's that good. <span className="text-muted">See for
             yourself.</span></h2>
           <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
             euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
@@ -193,11 +194,11 @@ const Main = () => {
         </div>
       </div>
 
-      <hr className="featurette-divider"/>
+      <hr className={styles.featurettedivider}/>
 
         <div className="row featurette">
           <div className="col-md-7">
-            <h2 className="featurette-heading">And lastly, this one. <span className="text-muted">Checkmate.</span>
+            <h2 className={styles.featuretteheading}>And lastly, this one. <span className="text-muted">Checkmate.</span>
             </h2>
             <p className="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis
               euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus,
@@ -213,7 +214,7 @@ const Main = () => {
 
 
 
-    
+
 
 
 
@@ -244,12 +245,12 @@ const Main = () => {
 
 
 
-
+</div>
     </body>
 
     </div>
-    
-    
+
+
 
 
 
