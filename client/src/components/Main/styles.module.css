@@ -5,8 +5,32 @@
 .bodymain {
   padding-top: 3rem;
   padding-bottom: 3rem;
-  color: #5a5a5a;
+  color: white;
+  background-image: url('./BG_Geo-Grey.png');
+  object-fit:fit;
+
+  background-color: gray;
+
+
+
 }
+
+
+
+.bodycontent{
+  margin: 0px 30px;
+}
+
+img {
+  object-fit: cover;
+}
+
+Nav.Link{
+  color:white;
+   
+}
+
+
 
 
 /* CUSTOMIZE THE CAROUSEL
