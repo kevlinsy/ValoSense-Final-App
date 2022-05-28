@@ -6,18 +6,22 @@ import Container from 'react-bootstrap/Container';
 
 import Table from 'react-bootstrap/Table'
 
-import bg from './BG_Geo-Pink.png';
-
-
-const Stats = () => {
+import bg from './BG_Spikes - Gradient.png';
+const Leaderboard = () => {
 
   return (
+    <body>
+      <div className={styles.bodymain}>
+
     <div>
       <header>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossOrigin="anonymous" />
         <link rel="stylesheet" href="styles.css" />
-      
-        <style dangerouslySetInnerHTML={{ __html: "\n\n          body {background-image: url(BG_Geo-Pink.png);background-size:cover;\n          color:#FFFFFF ; text-align:center}\n        " }} />
+        <link href="http://fonts.cdnfonts.com/css/akira-expanded" rel="stylesheet"/>
+        <link href="http://fonts.cdnfonts.com/css/planet-kosmos" rel="stylesheet"/>
+
+
+        <style dangerouslySetInnerHTML={{ __html: "\n\n          body {background-image: url(BG_Spikes - Gradient.png);background-size:cover;\n          color:#FFFFFF ; text-align:center}\n        " }} />
 
 
       </header>
@@ -49,53 +53,68 @@ const Stats = () => {
         </Container>
       </Navbar>
 
-      <div className={styles.bodymain}>
+      <div>
+    <br />
+    <br />
+    <h1>LEADERBOARD</h1>
+    <table>
+    </table><table style={{borderCollapse: 'separate', borderRadius: '25px', border: '1px solid black', marginLeft: 'auto', marginRight: 'auto'}}>
+      <thead>
+        <tr>
+          <th>
+          </th><th>PLAYER
+          </th><th>RANK
+          </th><th>SCORE
+          </th><th># MATCHES
+          </th></tr></thead>
+      <tbody>
+        <tr>
+          <td><img className="product-image" src="images/DPjoe.png" /></td>
+          <td>Joe Ilagan
+          </td><td>1st Place
+          </td><td>369
+          </td><td>#123
+          </td></tr><tr>
+          <td><img className="product-image" src="images/DPchesca.png" /></td>
+          <td>Chesca
+          </td><td>2nd Place
+          </td><td>270
+          </td><td>#456
+          </td></tr><tr>
+          <td><img className="product-image" src="images/DPjulia.png" /></td>
+          <td>Julia
+          </td><td>2nd Place
+          </td><td>270
+          </td><td>#789
+          </td></tr><tr>
+          <td><img className="product-image" src="images/DPkevlin.png" /></td>
+          <td>Kevlin
+          </td><td>2nd Place
+          </td><td>270
+          </td><td>#987
+          </td></tr><tr>
+          <td><img className="product-image" src="images/DPjohn.png" /></td>
+          <td>John
+          </td><td>2nd Place
+          </td><td>270
+          </td><td>#654
+          </td></tr><tr>
+          <td><img className="product-image" src="images/DPjoben.png" /></td>
+          <td>Joben Ilagan
+          </td><td>Best Prof
+          </td><td>1,000,000
+          </td><td>#321
+          </td></tr></tbody>
+    </table>
+    {/*footer----------------------------------------*/}
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 
-        <div className="container py-5 h-100">
-          <div className="row d-flex justify-content-center align-items-center h-100">
-            <div className="col col-xl-10">
-              <div className="card" style={{ borderRadius: '1rem', backgroundColor: '#FF4457' }}>
-                <div className="row g-0">
-                  <div className="col-md-6 col-lg-5 d-none d-md-block" style={{ borderRadius: '1rem' }}>
-                    <img alt="valo" src="/Images/stat.jpg" className="img-fluid" style={{ borderRadius: '1rem', height: 545, width: 450 }} />
-                  </div>
-                  <div className="col-md-6 col-lg-7 d-flex align-items-center">
-                    <div className="card-body p-4 p-lg-5" style={{ backgroundColor: '#FF4457', borderRadius: '1rem' }}>
-                      <link rel="stylesheet" type="text/css" href="Stats.css" />
-                      <h1> Your Stats </h1>
-
-
-                      <Table borderless responsive>
-                        <thead>
-                          <tr>
-                            <th /><th>Metric</th><th>Score</th>
-
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td><img style={{ width: "50px" }} src="/Images/gun.png" align="center" alt="valo" /></td><td>Damage per Round</td><td>100</td>
-                          </tr>
-                          <tr>
-                            <td><img style={{ width: "50px" }} src="/Images/scene.png" alt="valo" /></td><td>Kill/Death Ratio</td><td>120</td>
-                          </tr>
-                          <tr>
-                            <td><img style={{ width: "50px" }} src="/Images/success.png" alt="valo" /></td><td>Win Rate</td><td>150</td>
-                          </tr>
-
-                        </tbody>
-                      </Table>
-
-
-
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  </div>
         {/*footer*/}
         <div className="container-fluid-fixed-bottom">
           <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
@@ -111,12 +130,9 @@ const Stats = () => {
         </div>
       </div>
     </div>
-
-
-
-
+    </body>
 
   );
 };
 
-export default Stats;
+export default Leaderboard;

@@ -4,6 +4,8 @@ import Main from "./components/Main";
 import Signup from "./components/Signup";
 import Login from "./components/Login";
 import Stats from "./components/Stats";
+import Leaderboard from "./components/Leaderboard";
+import Matchmaking from "./components/Matchmaking";
 
 
 
@@ -18,6 +20,8 @@ function App() {
 			<Route path="/login" exact element={<Login />} />
 			<Route path="/index" exact element={<Main />} />
 			<Route path="/stats" exact element={<Stats/>} />
+			<Route path="/leaderboard" exact element={<Leaderboard/>} />
+			<Route path="/matchmaking" exact element={<Matchmaking/>} />
 
 		</Routes>
 	);

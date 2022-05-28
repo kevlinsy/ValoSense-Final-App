@@ -94,8 +94,8 @@ const Main = () => {
           </div>
               </Carousel.Caption>
             </Carousel.Item>
-            
-          
+
+
           </Carousel>
 
 
