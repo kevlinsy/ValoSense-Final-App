@@ -51,7 +51,7 @@ const Stats = () => {
 
       <div className={styles.bodymain}>
 
-        <div className="container py-5 h-100">
+        <div className="container py-5 h-100" style={{color:'black !important'}}  >
           <div className="row d-flex justify-content-center align-items-center h-100">
             <div className="col col-xl-10">
               <div className="card" style={{ borderRadius: '1rem', backgroundColor: '#FF4457' }}>
@@ -61,26 +61,25 @@ const Stats = () => {
                   </div>
                   <div className="col-md-6 col-lg-7 d-flex align-items-center">
                     <div className="card-body p-4 p-lg-5" style={{ backgroundColor: '#FF4457', borderRadius: '1rem' }}>
-                      <link rel="stylesheet" type="text/css" href="Stats.css" />
-                      <h1> Your Stats </h1>
+                      <h1 style={{outline:"0px"}} > Your Stats </h1>
 
 
-                      <Table borderless responsive>
+                      <Table style={{background:'transparent'}} borderless responsive>
                         <thead>
                           <tr>
-                            <th /><th>Metric</th><th>Score</th>
+                            < th style={{color:'black', borderColor:'black'}}/><th style={{color:'black'}}>Metric</th><th style={{color:'black'}}>Score</th>
 
                           </tr>
                         </thead>
                         <tbody>
                           <tr>
-                            <td><img style={{ width: "50px" }} src="/Images/gun.png" align="center" alt="valo" /></td><td>Damage per Round</td><td>100</td>
+                            <td style={{color:'black'}}><img style={{ width: "50px" }} src="/Images/gun.png" align="center" alt="valo" /></td><td style={{color:'black'}}>Damage per Round</td><td style={{color:'black'}}>100</td>
                           </tr>
                           <tr>
-                            <td><img style={{ width: "50px" }} src="/Images/scene.png" alt="valo" /></td><td>Kill/Death Ratio</td><td>120</td>
+                            <td style={{color:'black'}}><img style={{ width: "50px" }} src="/Images/scene.png" alt="valo" /></td><td style={{color:'black'}}>Kill/Death Ratio</td><td style={{color:'black'}}>120</td>
                           </tr>
                           <tr>
-                            <td><img style={{ width: "50px" }} src="/Images/success.png" alt="valo" /></td><td>Win Rate</td><td>150</td>
+                            <td style={{color:'black'}}><img style={{ width: "50px" }} src="/Images/success.png" alt="valo" /></td><td style={{color:'black'}}>Win Rate</td><td style={{color:'black'}}>150</td>
                           </tr>
 
                         </tbody>

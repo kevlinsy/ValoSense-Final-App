@@ -11,7 +11,7 @@ const Leaderboard = () => {
 
   return (
     <body>
-      <div className={styles.bodymain}>
+      <div className={styles.bodymainlead}>
 
     <div>
       <header>
@@ -57,8 +57,7 @@ const Leaderboard = () => {
     <br />
     <br />
     <h1>LEADERBOARD</h1>
-    <table>
-    </table><table style={{borderCollapse: 'separate', borderRadius: '25px', border: '1px solid black', marginLeft: 'auto', marginRight: 'auto'}}>
+    <table style={{borderCollapse: 'separate !important', borderRadius: '25px', border: '1px solid black', marginLeft: 'auto', marginRight: 'auto'}}>
       <thead>
         <tr>
           <th>

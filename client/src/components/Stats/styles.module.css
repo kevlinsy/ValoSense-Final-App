@@ -9,6 +9,7 @@
 
   h1 {
     color: black;
+    border: none;
   }
 
   table {
@@ -16,6 +17,7 @@
     height: 70%;
     align-items: center;
     gap:16px;
+    background:transparent;
 
     margin-left: auto;
     margin-right: auto;
@@ -23,9 +25,9 @@
   }
 
   th {
-    height: 10px;
     text-align: center;
     color: black;
+    border-bottom: 0px transparent ;
   }
 
   td {
@@ -54,3 +56,5 @@
      height:60px;   /* Height of the footer */
      background:#6cf;
   }
+
+

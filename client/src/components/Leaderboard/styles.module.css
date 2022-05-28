@@ -1,4 +1,4 @@
-.bodymain {
+.bodymainlead {
   background-size:cover;
   background-image: url('./BG_Spikes - Gradient.png');
  }
@@ -19,12 +19,12 @@
    background: #707070;
    opacity: 0.80;
    border-radius: 0.25em;
-   border-collapse: collapse;
    margin: 1em;
 
  }
+
  th {
-   border-bottom: 4px solid #FFFFFF;
+   border-bottom: 4px solid #FFFFFF !important;
    color: #FFFFFF;
    font-size: 17;
    font-weight: 600;
@@ -33,9 +33,10 @@
    font-weight: bold;
  }
  td {
+   width:fit-content!important;
    color: #fff;
-   font-weight: 400;
-   padding: 0.65em 1em;
+   font-weight: 400!important;
+   padding: 0.65em 1em!important;
  }
  .disabled td {
    color: #4F5F64;
@@ -55,15 +56,9 @@
    color: #FFFFFF;
    font-size: 3em;
    outline: 4px solid #ec244e;
-   outline-color:;
+   
    font-weight: 500;
    text-align: center;
    font-family: 'akira expanded', sans-serif;
    }
-.leadertable {
-  borderCollapse: 'separate';
-  borderRadius: '25px';
-  border: '1px solid black';
-  marginLeft: 'auto';
-  marginRight: 'auto';
-}
+
