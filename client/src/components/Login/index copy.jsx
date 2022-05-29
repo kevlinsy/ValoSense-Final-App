@@ -19,18 +19,12 @@ const Login = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
-
-		console.log('hello');
 		try {
 			const url = "http://localhost:8080/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
-			window.location = "/stats";
-			console.log('went here');
+			window.location = "/";
 		} catch (error) {
-
-			alert("Wrong credentials. Please try again.");
-
 			if (
 				error.response &&
 				error.response.status >= 400 &&
@@ -50,6 +44,12 @@ const Login = () => {
 
 				<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 					<Container>
+
+
+
+
+
+
 						<Navbar.Brand href="#home"><img src="/Images/full_logo.png" alt="logo" style={{ height: "80px", width: "150px" }} /> </Navbar.Brand>
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav">
@@ -81,7 +81,7 @@ const Login = () => {
 								</div>
 								<div className="col-md-6 col-lg-7 d-flex align-items-center">
 									<div className="card-body p-4 p-lg-5" style={{ backgroundColor: '#212529' }}>
-										<div>
+										<form>
 											<div className=" form-outline mb-4 ">
 												<img src="images/full_logo_horizontal.png" style={{ objectFit: 'contain', height: '60px', width: '200px', align: 'center' }} />
 											</div>
@@ -89,11 +89,10 @@ const Login = () => {
 											{/* email*/}
 
 
-											
-
 											<form className={styles.form_container} onSubmit={handleSubmit}>
+
 												<div className="form-outline mb-4">
-													<input style={{width:'500px'}}
+													<input
 														type="email"
 														id="form2Example17"
 														name="email"
@@ -108,7 +107,7 @@ const Login = () => {
 												{/* end of email*/}
 												{/* password*/}
 												<div className="form-outline mb-4">
-													<input style={{width:'500px'}} type="password"
+													<input type="password"
 														id="form2Example27"
 														placeholder="Password"
 														name="password"
@@ -124,10 +123,21 @@ const Login = () => {
 
 													<Button style={{ color: '#ffff' }} type="submit" variant="danger">Login</Button>
 
+
+
+
+
+
 												</div>
 
 
 											</form>
+
+
+
+
+
+
 											{/* end of password*/}
 											{/* button for log-in*/}
 
@@ -159,8 +169,10 @@ const Login = () => {
 													</div>
 												</a>
 											</div>
+										</form>
+										
+										
 										</div>
-									</div>
 								</div>
 							</div>
 						</div>
