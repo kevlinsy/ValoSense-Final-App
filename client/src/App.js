@@ -11,7 +11,10 @@ import Matchmaking from "./components/Matchmaking";
 
 
 function App() {
-	const user = localStorage.getItem("token");
+
+	const tData= JSON.parse(localStorage.getItem('token'));
+
+	const user = tData.token;
 
 	return (
 		<Routes>

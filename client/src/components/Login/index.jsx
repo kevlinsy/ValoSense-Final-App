@@ -11,6 +11,8 @@ import Table from 'react-bootstrap/Table'
 
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
+
+
 	const [error, setError] = useState("");
 
 	const handleChange = ({ currentTarget: input }) => {
@@ -22,11 +24,27 @@ const Login = () => {
 
 		console.log('hello');
 		try {
+
+			if(localStorage.getItem('token') ){
+				localStorage.removeItem("token");
+			}
+		
 			const url = "http://localhost:8080/api/auth";
 			const { data: res } = await axios.post(url, data);
-			localStorage.setItem("token", res.data);
+			
+			//console.log(res.data);
+			localStorage.setItem("token", JSON.stringify(res.data));
+
+			
+
+			const tData= JSON.parse(localStorage.getItem('token'));
+
+
+
 			window.location = "/stats";
-			console.log('went here');
+			
+
+
 		} catch (error) {
 
 			alert("Wrong credentials. Please try again.");
@@ -40,6 +58,9 @@ const Login = () => {
 			}
 		}
 	};
+
+
+
 
 	return (
 		<div>
