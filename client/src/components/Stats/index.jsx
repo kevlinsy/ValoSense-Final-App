@@ -36,7 +36,6 @@ const Stats = () => {
   const loggedUser = tData.userData.username;
 
 
-
   return (
     <div>
       <header>
