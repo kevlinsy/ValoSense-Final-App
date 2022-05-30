@@ -36,15 +36,13 @@ const Stats = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <Nav.Link href="#features">Match Making</Nav.Link>
-              <Nav.Link href="#pricing">Tournament</Nav.Link>
-              <Nav.Link href="#pricing">Leaderboard</Nav.Link>
+            <Nav.Link href="Main">Home</Nav.Link>
+              <Nav.Link href="Matchmaking">Match Making</Nav.Link>
+              <Nav.Link href="Leaderboard">Leaderboard</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">My Stats</Nav.Link>
-              <Nav.Link href="#deets">Profile</Nav.Link>
-              <Nav.Link href="#deets">Login</Nav.Link>
+              <Nav.Link href="Stats">My Stats</Nav.Link>
+              <Nav.Link href="Login">Login</Nav.Link>
 
             </Nav>
           </Navbar.Collapse>
@@ -61,11 +59,11 @@ const Stats = () => {
   {/*---your team column--*/}
   <div style={{height:'60vh'}} className="container">
     <div className="row">
-      
-      
+
+
       <div className="col-sm">
 
-        <div className={styles.matchTable}> 
+        <div className={styles.matchTable}>
 
         <table className="fixed" style={{borderCollapse: 'separate', borderRadius: '25px', border: '1px solid black', marginLeft: 'auto', marginRight: 'auto'}}>
           <thead>
@@ -109,14 +107,14 @@ const Stats = () => {
               </td></tr></tbody>
         </table>
         </div>
-       
 
-        
+
+
       </div>
       {/*--- end of your team column--*/}
 
-      <div className="col-sm" style={{color: '#FFFFFF', fontSize: '5.6em', fontWeight: 500, textAlign: 'center', fontFamily: '"planet kosmos", sans-serif'}}><br /> VS 
-      
+      <div className="col-sm" style={{color: '#FFFFFF', fontSize: '5.6em', fontWeight: 500, textAlign: 'center', fontFamily: '"planet kosmos", sans-serif'}}><br /> VS
+
       </div>
 
 
@@ -168,7 +166,7 @@ const Stats = () => {
 
 
     </div>
-  
+
 </div>
 
         {/*footer*/}

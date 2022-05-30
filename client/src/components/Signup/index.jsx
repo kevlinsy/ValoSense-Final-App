@@ -50,19 +50,23 @@ const Signup = () => {
 				{/*navbar*/}
 				<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 					<Container>
+
+
+
+
+
+
 						<Navbar.Brand href="#home"><img src="/Images/full_logo.png" alt="logo" style={{ height: "80px", width: "150px" }} /> </Navbar.Brand>
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav">
 							<Nav className="me-auto">
-								<Nav.Link href="#features">Home</Nav.Link>
-								<Nav.Link href="#features">Match Making</Nav.Link>
-								<Nav.Link href="#pricing">Tournament</Nav.Link>
-								<Nav.Link href="#pricing">Leaderboard</Nav.Link>
+							<Nav.Link href="Main">Home</Nav.Link>
+								<Nav.Link href="Matchmaking">Match Making</Nav.Link>
+								<Nav.Link href="Leaderboard">Leaderboard</Nav.Link>
 							</Nav>
 							<Nav>
-								<Nav.Link href="#deets">My Stats</Nav.Link>
-								<Nav.Link href="#deets">Profile</Nav.Link>
-								<Nav.Link href="#deets">Login</Nav.Link>
+								<Nav.Link href="Stats">My Stats</Nav.Link>
+								<Nav.Link href="Login">Login</Nav.Link>
 
 							</Nav>
 						</Navbar.Collapse>
@@ -105,8 +109,8 @@ const Signup = () => {
 												required
 												className={styles.input}
 											/>
-											
-											<label> Email Address </label> 
+
+											<label> Email Address </label>
 
 											<input
 												type="email"
@@ -119,7 +123,7 @@ const Signup = () => {
 											/>
 
 
-											<label> Password </label> 
+											<label> Password </label>
 											<input
 												type="password"
 												placeholder="Enter Password"
@@ -130,10 +134,10 @@ const Signup = () => {
 												className={styles.input}
 											/>
 
-											
-											
-											
-											
+
+
+
+
 											<div className="pt-1 mb-4">
 
 												<Button style={{ padding: '12px', borderRadius: '10px', width:'650px', color: '#ffff' }} type="submit" variant="danger">Register</Button>

@@ -38,15 +38,13 @@ const Leaderboard = () => {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#features">Home</Nav.Link>
-              <Nav.Link href="#features">Match Making</Nav.Link>
-              <Nav.Link href="#pricing">Tournament</Nav.Link>
-              <Nav.Link href="#pricing">Leaderboard</Nav.Link>
+            <Nav.Link href="Main">Home</Nav.Link>
+              <Nav.Link href="Matchmaking">Match Making</Nav.Link>
+              <Nav.Link href="Leaderboard">Leaderboard</Nav.Link>
             </Nav>
             <Nav>
-              <Nav.Link href="#deets">My Stats</Nav.Link>
-              <Nav.Link href="#deets">Profile</Nav.Link>
-              <Nav.Link href="#deets">Login</Nav.Link>
+              <Nav.Link href="Stats">My Stats</Nav.Link>
+              <Nav.Link href="Login">Login</Nav.Link>
 
             </Nav>
           </Navbar.Collapse>

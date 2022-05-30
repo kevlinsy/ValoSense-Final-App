@@ -42,25 +42,22 @@ const Main = () => {
 
 
 
-            <Navbar.Brand href="#home"><img src="images/full_logo.png" alt="logo" style={{ height: "80px", width: "150px" }} /> </Navbar.Brand>
+            <Navbar.Brand href="#home"><img src="/Images/full_logo.png" alt="logo" style={{ height: "80px", width: "150px" }} /> </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="#features">Home</Nav.Link>
-                <Nav.Link href="#features">Match Making</Nav.Link>
-                <Nav.Link href="#pricing">Tournament</Nav.Link>
-                <Nav.Link href="#pricing">Leaderboard</Nav.Link>
+              <Nav.Link href="Main">Home</Nav.Link>
+                <Nav.Link href="Matchmaking">Match Making</Nav.Link>
+                <Nav.Link href="Leaderboard">Leaderboard</Nav.Link>
               </Nav>
               <Nav>
-                <Nav.Link href="#deets">My Stats</Nav.Link>
-                <Nav.Link href="#deets">Profile</Nav.Link>
-                <Nav.Link href="#deets">Login</Nav.Link>
+                <Nav.Link href="Stats">My Stats</Nav.Link>
+                <Nav.Link href="Login">Login</Nav.Link>
 
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
-
 
 
       </header>
@@ -78,7 +75,7 @@ const Main = () => {
               <Carousel.Caption>
               <div className={`text-left ${styles["carouselcaption"]}`}>
             <h1>MATCH MAKING</h1>
-            <p><a className="btn btn-lg btn-danger" href="/" role="button">PLAY NOW</a></p>
+            <p><a className="btn btn-lg btn-danger" href="matchmaking" role="button">PLAY NOW</a></p>
           </div>
               </Carousel.Caption>
             </Carousel.Item>
