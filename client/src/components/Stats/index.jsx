@@ -16,12 +16,12 @@ import ReactDOM from 'react-dom/client';
 const Stats = () => {
 
   function formatName(user) {
-    return user.firstName + ' ' + user.lastName;
+    return user.fullName + ' ' + user.username;
   }
 
   const user = {
-    firstName: 'Harper',
-    lastName: 'Perez'
+    fullName: 'Harper',
+    username: 'Perez'
   };
 
   const element = (
@@ -33,7 +33,7 @@ const Stats = () => {
 
   const tData = JSON.parse(localStorage.getItem('token'));
 
-  const loggedUser = "" + tData.userData.firstName + " " + tData.userData.lastName;
+  const loggedUser = tData.userData.username;
 
 
 
