@@ -15,11 +15,8 @@ function App() {
 	if ( localStorage.getItem('token')){ 
 
 		try{
-
 			const tData= JSON.parse(localStorage.getItem('token'));
-
 			const user = tData.token;
-
 		}
 
 		catch (err){

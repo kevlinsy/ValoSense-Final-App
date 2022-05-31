@@ -11,10 +11,7 @@ import Table from 'react-bootstrap/Table'
 
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
-
-
 	const [error, setError] = useState("");
-
 	const handleChange = ({ currentTarget: input }) => {
 		setData({ ...data, [input.name]: input.value });
 	};
@@ -24,25 +21,19 @@ const Login = () => {
 
 		console.log('hello');
 		try {
-
 			if(localStorage.getItem('token') ){
 				localStorage.removeItem("token");
 			}
-
 			const url = "http://localhost:8080/api/auth";
 			const { data: res } = await axios.post(url, data);
-
+			
 			//console.log(res.data);
 			localStorage.setItem("token", JSON.stringify(res.data));
 
-
-
 			const tData= JSON.parse(localStorage.getItem('token'));
 
-
-
 			window.location = "/stats";
-
+			
 
 
 		} catch (error) {
@@ -69,26 +60,21 @@ const Login = () => {
 				<link rel="stylesheet" href="styles.css" />
 				{/*navbar*/}
 
-
 				<Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
 					<Container>
-
-
-
-
-
-
 						<Navbar.Brand href="#home"><img src="/Images/full_logo.png" alt="logo" style={{ height: "80px", width: "150px" }} /> </Navbar.Brand>
 						<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 						<Navbar.Collapse id="responsive-navbar-nav">
 							<Nav className="me-auto">
-							<Nav.Link href="Main">Home</Nav.Link>
-								<Nav.Link href="Matchmaking">Match Making</Nav.Link>
-								<Nav.Link href="Leaderboard">Leaderboard</Nav.Link>
+								<Nav.Link href="#features">Home</Nav.Link>
+								<Nav.Link href="#features">Match Making</Nav.Link>
+								<Nav.Link href="#pricing">Tournament</Nav.Link>
+								<Nav.Link href="#pricing">Leaderboard</Nav.Link>
 							</Nav>
 							<Nav>
-								<Nav.Link href="Stats">My Stats</Nav.Link>
-								<Nav.Link href="Login">Login</Nav.Link>
+								<Nav.Link href="#deets">My Stats</Nav.Link>
+								<Nav.Link href="#deets">Profile</Nav.Link>
+								<Nav.Link href="#deets">Login</Nav.Link>
 
 							</Nav>
 						</Navbar.Collapse>
@@ -115,7 +101,7 @@ const Login = () => {
 											{/* email*/}
 
 
-
+											
 
 											<form className={styles.form_container} onSubmit={handleSubmit}>
 												<div className="form-outline mb-4">
@@ -127,7 +113,8 @@ const Login = () => {
 														value={data.email}
 														required
 														placeholder="user@email.com"
-														className="form-control form-control-lg" />
+														className="form-control form-control-lg" 
+														/>
 
 													<label className="form-label" htmlFor="form2Example17">Email Address</label>
 												</div>
