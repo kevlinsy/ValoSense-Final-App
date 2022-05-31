@@ -9,7 +9,7 @@ import { Link } from "react-router-dom";
 import bg from './BG_Geo-Gradient.png';
 import { useState,useEffect } from "react";
 
-const Stats = () => {
+const newMatchmaking = () => {
 
   function formatName(user) {
     return user.fullName + ' ' + user.username;
@@ -220,4 +220,4 @@ useEffect(() => getData(),[]);
   );
 };
 
-export default Stats;
+export default newMatchmaking;

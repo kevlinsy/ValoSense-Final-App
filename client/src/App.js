@@ -38,6 +38,7 @@ function App() {
 			<Route path="/stats" exact element={<Stats/>} />
 			<Route path="/leaderboard" exact element={<Leaderboard/>} />
 			<Route path="/matchmaking" exact element={<Matchmaking/>} />
+			<Route path="/newmatchmaking" exact element={<newMatchmaking/>} />
 
 		</Routes>
 	);

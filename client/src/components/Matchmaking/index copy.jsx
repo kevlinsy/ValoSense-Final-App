@@ -3,74 +3,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
 import Container from 'react-bootstrap/Container';
-import axios from "axios";
+
 import Table from 'react-bootstrap/Table'
-import { Link } from "react-router-dom";
+
 import bg from './BG_Geo-Gradient.png';
-import { useState,useEffect } from "react";
+
 
 const Stats = () => {
-
-  function formatName(user) {
-    return user.fullName + ' ' + user.username;
-  }
-
-  const user = {
-    fullName: 'Harper',
-    username: 'Perez'
-  };
-
-  const element = (
-    <h1>
-      Hello, {formatName(user)}!
-    </h1>
-  );
-
-  function formatemail(email) {
-    return user.email;
-  }
-
-  const email = {
-    email: 'j@gmail.com',
-  };
-  function formatRankScore(rankScore) {
-    return user.rankScore;
-  }
-
-  const rankScore = {
-    rankScore: '100',
-  };
-  const tData = JSON.parse(localStorage.getItem('token'));
-
-  const tData2= JSON.parse(localStorage.getItem('token'));
-
-  const [data, setData] = tData.userData.rankGroup;
-
-  useEffect(() => {
-
-    //const url = "http://localhost:8080/api/auth/matchmaking";
-    //const { data: res } = axios.get(url, data);
-
-    });
-      const loggedUser = tData.userData.username;
-      const userEmail = tData.userData.email;
-      const userRankScore = tData.userData.rankScore;
-      const userRankGroup = tData.userData.rankGroup;
-
-    const[data1, setData1] = useState([]);
-    const[data2, setData2] = useState([]);
-    const url = "http://localhost:8080/api/auth/matchmaking";
-
-    const getData = () => {
-      axios.post(url, {
-        data:userRankGroup})
-      .then((response) => {
-        console.log(response);
-        setData1(response.data.slice(0,4))
-        setData2(response.data.slice(4,9))
-      });
-    };
-    useEffect(() => getData(),[]);
 
   return (
     <div style={{height:'100vh'}} className={styles.bodymain}>
@@ -87,9 +26,6 @@ const Stats = () => {
 
       <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
         <Container>
-
-
-
 
 
 
@@ -136,29 +72,36 @@ const Stats = () => {
                 {/*-- first person--*/}
               </th></tr></thead>
           <tbody>
-          <tr>
-          <td>{userEmail}</td>
-          <td>{userRankScore}</td>
-          </tr>
-          {data1.map((data) => (
             <tr>
               {/*--name 1st person-*/}
-              <td>{data.email}
+              <td>Joe
                 {/*--score 1st person-*/}
-              </td><td>{data.rankScore}
+              </td><td>369
                 {/*-- 2nd person--*/}
-              </td>
+              </td></tr><tr>
               {/*--name 2nd person-*/}
-              <td>
+              <td>Chesca
                 {/*--score 2nd person-*/}
-              </td><td>
-              </td>
-            </tr>
-
-          )
-
-          )}
-            </tbody>
+              </td><td>270
+                {/*-- 3rd person--*/}
+              </td></tr><tr>
+              {/*--name 3rd person-*/}
+              <td>Julia
+                {/*--score 3rd person-*/}
+              </td><td>270
+                {/*-- 4th person--*/}
+              </td></tr><tr>
+              {/*--name 4th person-*/}
+              <td>Kevlin
+                {/*--score 4th person-*/}
+              </td><td>270
+                {/*-- 5th person--*/}
+              </td></tr><tr>
+              {/*--name 5th person-*/}
+              <td>John
+                {/*--score 5th person-*/}
+              </td><td>270
+              </td></tr></tbody>
         </table>
         </div>
 
@@ -182,21 +125,38 @@ const Stats = () => {
               <th style={{textAlign: 'center'}}>Player
               </th><th style={{textAlign: 'center'}}>Score
               </th></tr></thead>
-              <tbody>
-
-              {data2.map((data) => (
-                <tr>
-                    {/*-- 2nd person--*/}
-                  {/*--name 2nd person-*/}
-                  <td>{data.email}
-                    {/*--score 2nd person-*/}
-                  </td><td>{data.rankScore}
-                  </td>
-                </tr>
-              )
-
-              )}
-                </tbody>
+          <tbody>
+            {/*-- first person--*/}
+            <tr>
+              {/*-- name 1st person opponent --*/}
+              <td>Joe
+                {/*-- score 1st person opponent --*/}
+              </td><td>369
+                {/*-- second person--*/}
+              </td></tr><tr>
+              {/*-- name 2nd person opponent --*/}
+              <td>Chesca
+                {/*-- score 2nd person opponent --*/}
+              </td><td>270
+                {/*-- 3rd person--*/}
+              </td></tr><tr>
+              {/*-- name 3rd person opponent --*/}
+              <td>Julia
+                {/*-- score 3rd person opponent --*/}
+              </td><td>270
+                {/*-- 4th person--*/}
+              </td></tr><tr>
+              {/*-- name 4th person opponent --*/}
+              <td>Kevlin
+                {/*-- score 4th person opponent --*/}
+              </td><td>270
+                {/*-- 5th person--*/}
+              </td></tr><tr>
+              {/*-- name 5th person opponent --*/}
+              <td>Joben
+                {/*-- score 5th person opponent --*/}
+              </td><td>100
+              </td></tr></tbody>
         </table>
       </div>
 
@@ -221,6 +181,10 @@ const Stats = () => {
         </div>
       </div>
     </div>
+
+
+
+
 
   );
 };

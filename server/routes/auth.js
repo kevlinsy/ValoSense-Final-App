@@ -42,22 +42,50 @@ const validate = (data) => {
 	});
 	return schema.validate(data);
 };
-function parseJwt (token) {
-    var base64Url = token.split('.')[1];
-    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-		console.log(jsonPayLoad)
-    return JSON.parse(jsonPayload);
-};
 
+
+var a = '100'
 
 router.get("/matchmaking", (req, res) => {
-	var rankVar = req.body;
-	var query = User.find().where('rankGroup').equals(rankVar).select('firstName email rankScore')
-  query.limit(9)
+
+	
+	console.log("here");
+
+	varRank="data"; 
+
+	var query = User.find().where('dmgPerRound').equals(a)
+     var matchGroup = query
     .then(users => res.json(users))
     .catch(err => res.status(400).json('Error: ' + err));
+
+
+	
 });
+
+router.post("/matchmaking", (req, res) => {
+
+	console.log("RANK GROUP is " + req.body.data);
+
+	
+	rankVar=req.body.data; 
+
+	/** var query = User.find().where('dmgPerRound').equals(a)
+     var matchGroup = query
+    .then(users => res.json(users))
+    .catch(err => res.status(400).json('Error: ' + err));**/ 
+
+
+	
+	var query = User.find().where('rankGroup').equals(rankVar)
+	query.limit(9)
+    .then(users => res.json(users))
+    .catch(err => res.status(400).json('Error: ' + err));
+
+
+
+
+	
+});
+
+
 module.exports = router;
